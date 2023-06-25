@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>golden florist</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+  <header class="text-light-french-beige bg-ucla-blue pb-5 pt-7 grid gap-8 sticky top-0 z-20">
+    <div class="flex items-center justify-evenly">
+      <a href="index.html">
+        <h1 class="capitalize text-5xl place-self-center font-['habibi'] flex-initial">golden florist</h1>
+      </a>
+      <div class="flex items-center gap-2.5 shrink"><a href="cart.html">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+          </svg>
+        </a>
+        <p>|</p>
+        <a href="#" class="capitalize text-2xl">login</a>
+      </div>
+    </div>
+    <nav class="capitalize text-3xl flex justify-around font-['IM Fell Double Pica']">
+      <a href="bouquet.html" class="hover:text-astec-gold">bouquet</a>
+      <a href="hampers.html" class="hover:text-astec-gold">hampers</a>
+      <a href="gift.html" class="hover:text-astec-gold">gift</a>
+      <a href="request.html" class="hover:text-astec-gold">request</a>
+    </nav>
+  </header>
+  <main class="mx-8 mt-10 mb-16">
+    <div id="waktu-bayar" class="font-['IM Fell Double Pica'] text-5xl text-center font-bold text-ucla-blue">
+      10:00
+    </div>
+    <h2 class="capitalize text-3xl text-center my-5 text-ucla-blue">menunggu pembayaran</h2>
+    <img class="mx-auto animate-wiggle" src="img/flower-bouquet-svgrepo-com.svg" alt="">
+  </main>
+  <script>
+    const timer = document.getElementById('waktu-bayar');
+    let time = 600_000;
+    let countdown = setInterval(function () {
+      time -= 1000;
+      timer.innerHTML = `${Math.floor((time % 3600000) / 60000)} : ${Math.floor((time % 60000) / 1000) < 10 ? '0' + Math.floor((time % 60000) / 1000) : Math.floor((time % 60000) / 1000)
+        }`
+      if (time < 0) {
+        clearInterval(countdown);
+        location.replace("berhasil.html")
+      }
+    }, 1000)
+  </script>
+</body>
+
+</html>

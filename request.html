@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>golden florist</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+  <header class="text-light-french-beige bg-ucla-blue pb-5 pt-7 grid gap-8 sticky top-0 z-20">
+    <div class="flex items-center justify-evenly">
+      <a href="index.html">
+        <h1 class="capitalize text-5xl place-self-center font-['habibi'] flex-initial">golden florist</h1>
+      </a>
+      <div class="flex items-center gap-2.5 shrink">
+        <a href="cart.html">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+          </svg>
+        </a>
+        <p>|</p>
+        <a href="#" class="capitalize text-2xl">login</a>
+      </div>
+    </div>
+    <nav class="capitalize text-3xl flex justify-around font-['IM Fell Double Pica']">
+      <a href="bouquet.html" class="hover:text-astec-gold">bouquet</a>
+      <a href="hampers.html" class="hover:text-astec-gold">hampers</a>
+      <a href="gift.html" class="hover:text-astec-gold">gift</a>
+      <a href="request.html" class="hover:text-astec-gold">request</a>
+    </nav>
+  </header>
+  <main class="mx-8 mt-10 mb-16">
+    <form action="" method="post" class="capitalize text-center flex flex-col gap-3 content-center">
+      <div>
+        <label for="name" class="text-xl">your name : </label><br>
+        <input type="text" name="name" id="name" class="w-full h-8 px-3">
+      </div>
+      <div>
+        <label for="phone" class="text-xl">your phone : </label><br>
+        <input type="number" name="phone" id="phone" class="w-full h-8 px-3">
+      </div>
+      <div>
+        <label for="email" class="text-xl">your email : </label><br>
+        <input type="email" name="email" id="email" class="w-full h-8 px-3">
+      </div>
+      <div class="text-left mx-auto">
+        <p class="text-xl">type :</p>
+        <input type="radio" id="bouquet" name="category" value="bouquet">
+        <label for="bouquet">bouquet</label><br>
+        <input type="radio" id="hampers" name="category" value="hampers">
+        <label for="hampers">hampers</label><br>
+        <input type="radio" id="gift" name="category" value="gift">
+        <label for="gift">gift</label><br>
+      </div>
+      <div>
+        <label for="detail" class="text-xl">detail : </label><br>
+        <textarea name="detail" id="detail" class="w-full h-28 px-3"></textarea>
+      </div>
+      <button type="submit" class="py-2.5 px-5 bg-ucla-blue text-white text-base capitalize">send</button>
+    </form>
+  </main>
+</body>
+
+</html>
